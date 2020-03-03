@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/css/bootstrap.min.css">
+    <style type="text/css">
+        form {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form class="center-block" id="form_login">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="请输入用户名">
+                     <!-- name=value值，是给后端使用的 -->
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                </div>
+                <button type="button" class="btn btn-default" id="btn">登录</button>
+               <!-- a标签跳转页面，给相应的地址就可以 -->
+                <a href="/web/html/regist.html">去注册</a>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="/web/js/sea.js"></script>
+    <script type="text/javascript" src="/web/js/seajs-css.js"></script>
+    <script type="text/javascript" src="/web/js/jquery.js"></script>
+    <script type="text/javascript" src="/web/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    // 引入入口文件
+    seajs.use('/web/modules/login/login');
+    </script>
+</body>
+
+</html>
