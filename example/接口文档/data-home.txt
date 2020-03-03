@@ -1,0 +1,36 @@
+接口描述
+    请求地址        /data/home
+    请求方式        GET
+    文档格式        application/json
+    编码格式        ...
+    ...
+携带数据
+    query数据
+        num         数量
+        id          id标识
+    data数据
+        color       颜色
+        ...
+返回数据
+    {
+        "ad": [      Array  广告数据
+            {
+                "title":        String  标题
+                "description":  String  描述
+                "_id":          String  id
+                "product":      String  分类id
+                "url":          String  图片地址
+            }
+        ],
+        "list": [
+            {
+                "img":          String  商品图片
+                "title":        String  商品标题
+                "sales":        Number  商品数量
+                "price":        Number  商品价格
+                "originPrice":  Number  商品原价
+                "_id":          String  商品id
+            },
+        ]
+        ...
+    }
