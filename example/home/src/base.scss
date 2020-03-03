@@ -1,0 +1,12 @@
+// 定义导航部分背景颜色
+$navColor: #06c1ae;
+
+// 制作三角形的 
+//使用使用混合方法    插值：#{$dir}
+@mixin arrow($w: 10px, $c: #000, $dir: top) {
+    // 兼容块元素与行内元素
+    width: 0;
+    font-size: 0;
+    border: $w solid transparent;
+    border-#{$dir}-color: $c;
+}
