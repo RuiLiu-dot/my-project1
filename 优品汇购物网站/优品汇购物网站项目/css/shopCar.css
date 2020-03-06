@@ -1,0 +1,577 @@
+@charset "UTF-8";
+.inner{
+    width: 1200px;
+    margin: auto;  }
+
+.body{
+  color: #FFFFFF;
+}
+.public-Top>.box-top{
+    width: 100%;
+    height: 50px;
+    position:relative;
+    top:0;
+    box-shadow: 0px 3px 5px #EBEBEB;
+    background: #333333;
+    z-index: 100; }
+
+.box-top .rollText{
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+    border: solid 1px white;
+    padding: 2px 20px;
+    cursor: pointer;
+    position: relative;
+    top:12px;
+    left: 0px;
+    background: url(../images/03.png) left/20px no-repeat;
+
+}
+
+.rollText ul {
+    
+    height: 550px;
+    position: absolute;
+    top: 0;
+    
+}
+.rollText li{
+    height: 20px;
+    width: 200px;
+    font-size: 16px;
+    color: #666666;
+    text-align: left;
+    line-height: 25px;
+}
+.rollText a{
+
+    color: #666666;
+}
+/* right */
+.comText{
+      
+    position: relative;
+    top: -6px;
+    left: 0px;
+    
+  }
+  .comText li{
+    float: right;
+    color: #CCCCCC;
+    margin-left: 9px;
+    font-size: 14px;
+    cursor: pointer;
+
+  }
+  .comText a{
+    color: #CCCCCC;
+ }
+  .comText li:first-of-type{
+    margin-left: 18px;
+  }
+  .comText li>img{
+    
+     width: 10px;
+     position: absolute;
+     top:-2px;
+     right: 44px;
+
+  }
+  .comText a:hover{
+   
+    color: white;
+    font-weight: bold; 
+
+ }
+
+
+  /* head-foot开始！！！！ */
+
+  .box-foot{
+      width: 100%;      
+      height: 100px;
+      background: #FFFFFF;
+      position: sticky;
+      top: 0px;
+      left: 0px;
+      z-index: 1000;
+      
+    }
+    /*logo部分start*/
+
+    div.item1{
+     width: 160px;
+     margin-left: 0px;
+     float: left;
+
+
+    }
+    
+     div.item1>img{
+      width: 66px;
+      position: absolute;
+      top:14px;
+
+
+     }
+     /*这里之后试着用弹性盒子来弄,发现真的很方便，对父元素设置弹性盒子*/
+     div.item1>p{
+      display: inline-block;
+      color: #CCCCCC;
+      margin-top: 14px;
+      margin-left: 75px;
+
+
+    }
+      div.item1>p>span{
+       display: block;
+     }
+     
+      div.item1>p>span:first-of-type{
+       font-size: 28px;
+       color:#999CAC;
+       font-weight: bold;
+     }
+     /*导航栏部分*/
+     .box-foot>.inner{
+     
+        position: relative;
+     }
+     
+     .item2{
+      float: left;
+
+     }
+     .item2>ul{
+      
+      margin-left: 18px;
+      margin-top: 46px;
+     }
+     
+     
+    .item2 li{
+      float: left;
+      font-size: 15px;
+      margin-left: 31px;
+      font-weight: bold;
+      /*position: relative;*/
+    }
+    .item2 a{
+        color:#66666A;
+    }
+    .item2 a:hover{
+        
+        border-bottom: solid 2px #0084D0;
+        padding: 0px 7px;
+        color: yellowgreen;
+
+    } 
+    /* 搜索栏 */
+    .public-top-bottom.public-search{
+           
+        width: 200px;
+        
+        float: left;
+        
+       
+  
+      }
+  
+      .public-search>input{
+         
+        width: 225px;
+        height: 40px;
+        margin-left: 33px;
+        margin-top: 33px;
+        
+         background: url(../images/01.png) 200px/18px no-repeat; 
+         border-radius: 32px;
+         border: solid 1px #959595;
+         padding-left: 24px;/*设置焦点往里边走*/
+          
+     }
+
+     /* 购物车 */
+     .buy-car{
+        position: relative;
+        width: 100px;
+        height: 30px;
+        float: right;
+        background: url(../images/02.png) left top/20px no-repeat;
+        cursor: pointer;
+        margin-top: -26px;
+        /*padding: 5px 15px;*/
+      }
+      .buy-car>p{
+        padding-left: 25px;
+        display: block;
+        height: 14px;
+        
+        
+      }
+      .buy-car>span{
+          display: block;
+      }
+      .buy-car span.num{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          position: absolute;
+          top: -10px;
+          right: 0px;
+          background-color: #FF5918;
+          font-size: 12px;
+          color: #FFFFFF;
+          text-align: center;
+          line-height: 15px;
+      }
+      .buy-car .sanjiao{
+          position: absolute;
+          top: 27px;
+          right: 30px;
+          width: 0;
+          height: 0;
+          display: none;
+          border: 8px solid #ddd;
+          border-color:  transparent  transparent #ddd;
+          border-top: none;
+      }
+      .buy-car:hover .sanjiao{
+           display: block;
+       }
+       .buy-car .goods{
+         
+          position: absolute;
+          top:100px;
+          display: none;
+          z-index: 11;
+          top: 35px;
+          padding:10px;
+          border:1px solid #ddd;
+          right: 0px;
+          z-index: 333;
+          width: 305px;
+          box-shadow: 0 -3px 3px #F1F1F1;
+          background-color: #FFFFFF;
+          
+      }
+      .buy-car:hover .goods{
+          
+          display: block;
+      }
+      .buy-car .pic>img{
+          width: 80px;
+          height: 80px;
+          background-color: rgba(228, 228, 228, 1);
+          text-align: center;
+          line-height: 80px;
+      }
+      .buy-car .item{
+          display: flex;
+          margin-top: 10px;
+      }
+      .buy-car .item:hover{
+          
+          opacity: 0.9;
+          font-weight: bold;  
+      }
+    
+      .buy-car .midd{
+          color: #333333;
+          font-size: 12px;
+          padding-left: 10px;
+          padding-top: 6px;
+       }
+      .buy-car .midd p:last-child{
+          padding-top: 6px;
+       }
+      .buy-car .midd p span{
+          color: #999999;
+       }
+      .buy-car .ri{
+           padding-top: 6px;
+           position: relative;
+         
+           height: 20px;
+           width: 50px;
+       }
+      .buy-car .ri span{
+          padding-left: 10px;
+          color: #F04844;
+      }
+      .buy-car .ri span:last-child{
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          top: -1px;
+          right: -27px;
+          background: url(../images/close.png) no-repeat;
+          background-size: 16px 16px;
+          background-position: 23px 10px;
+          }
+      
+      .buy-car .prace{
+          position: relative;
+          margin-top: 20px;
+      
+      }
+      .buy-car .prace p{
+          color: #F04844;
+          font-size: 18px;
+          padding-left: 20px;
+      
+      }
+      .buy-car .prace p:first-child{
+          color: #666666;
+          font-size: 12px;
+      }
+      
+      .buy-car .prace button{
+           position: absolute;
+           right: 20px;
+           top: 0px;
+           background-color:  rgba(240, 72, 68, 1);
+           width: 150px;
+           height: 40px;
+           outline: none;
+           border:1px solid rgba(240, 72, 68, 1);
+           cursor: pointer;
+           text-align: center;
+           line-height: 40px;
+      }
+      .buy-car button>a{
+          color: #FFFFFF;
+          cursor: pointer;
+  
+      }
+
+      /* 购物车部分start */
+
+      div.myshopCar{
+          margin-top: 35px;
+      }
+      .myshopCar>header{
+          color:#99A4BE;
+          font-size: 16px;
+      }
+      .myshopCar>.content{
+        margin-top: 33px;
+        box-shadow: 0px 3px 2px #3a3434;
+      }
+      .myshopCar #shopping>thead{
+          
+        background-color: #F9F9F9;
+        
+         
+      }
+
+       /*购物车内容正是开始start*/
+    .myshopCar #shopping th:nth-of-type(1){
+        width: 105px;
+        padding-left: 20px;
+       
+
+    }
+    .myshopCar #shopping th:nth-of-type(2){
+        
+        width: 482px;
+
+    }
+    .myshopCar #shopping th:nth-of-type(3){
+        
+        width: 35px;
+
+    }
+    .myshopCar #shopping th:nth-of-type(4){
+        
+        width: 260px;
+
+    }
+    .myshopCar #shopping th:nth-of-type(5){
+        
+        width: 35px;
+
+    }
+    .myshopCar #shopping th:nth-of-type(6){
+        
+        width: 192px;
+
+    }
+  
+    /* tbody */
+    .content tbody{
+        border: solid 1px black;
+        margin-top: 30px;
+    }
+    
+
+      /* 底部start */
+        /* 底部start */
+        .foot-item{
+            background: white;
+            width: 100%;
+  
+          }
+         footer{
+             box-sizing: border-box;
+             padding: 50px 0px 40px;
+            
+             
+         }
+         footer>ul{
+             display: flex;
+             justify-content: space-between;
+         }
+         footer>ul>li{
+             width: 25%;
+             box-sizing: border-box;
+             text-align: center;
+             color: #999999;
+             margin: 0 20px;
+         }
+         footer>ul>li>p{
+             font-size: 16px;
+             margin-bottom: 30px;
+         }
+         footer>ul>li:first-of-type~li{
+             border-left: solid 1px   #E4E4E4;
+         }
+         
+         div.message {
+        
+            box-sizing: border-box;
+            display: inline-block;
+            padding-top: 50px;
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            border: solid 1px #EDEDED;
+            background: url(../images/9.png) center 14px/38px no-repeat;
+            cursor: pointer;
+         }
+         .ml{
+             margin-left: 8px;
+         }
+         footer .question{
+             background-image: url(../images/10.png) ;
+             margin-left: 10px;
+              cursor: pointer;
+         }
+         footer .public{
+             background-image: url(../images/11.png) ;
+              cursor: pointer;
+         }
+  
+  
+  
+         footer .little{
+             background-image: url(../images/12.png) ;
+         }
+  
+  
+         footer>ul>li>.code{
+              display: inline-block;
+              border: solid 1px #EDEDED;
+         }
+         footer>ul>li>.code-left{
+             display: inline-block;
+             width: 100px;
+             height: 100px;          
+             font-size: 12px;
+             line-height: 18px;
+             margin-left: 10px;
+            
+         }
+         
+         footer>ul>li>.code-left>p:last-of-type{
+             width: 90px;
+             height: 30px;
+             text-align: center;
+             line-height: 30px;
+             border: solid 1px #999999;
+             margin-top: 10px;
+         }
+        div.number>p:nth-of-type(1){
+           
+            font-weight: bolder;
+            color:black;
+            font-size: 20px;
+         }
+         .foot{
+             background:#333333;
+             width: 100%;
+             height: 300px; 
+         }
+         .foot .foot-top{
+             display: flex;
+             justify-content:space-between;
+             color: white;
+             padding: 0px 170px 0px 110px;
+             border-bottom: solid 1px #999999;
+         }
+         .foot .foot-top>li{
+             /* margin-left: 110px; */
+             line-height: 150px;
+             font-size: 24px;
+             font-weight: bold;
+             padding-left: 64px;
+             background: url(../images/u1034.png) left center no-repeat;
+         
+         }
+         .foot .foot-top>li:nth-of-type(2){
+             background: url(../images/u1029.png) left center  no-repeat,
+                         url(../images/u1030.png) 8px center no-repeat;
+             
+         
+         }
+         .foot .foot-bott{
+             text-align: center;
+             color: #999999;
+         }
+         .foot .foot-bott>a{
+             display: inline-block;
+             color: #999999;
+             margin-top: 35px;
+             margin-bottom: 22px;
+  
+         }
+  
+          /*设置锚点*/
+           .go-top{
+            
+            width: 46px;
+            height: 93px;
+            position:sticky;
+            bottom: 450px;
+            left: 40px;
+            cursor: pointer;
+  
+           }
+           .go-top>a{
+             display: block;
+           }
+           .go-top img{
+            
+            margin-top: 15px;
+           }
+  
+           .go-top img:last-of-type{
+           
+            display: block;
+            margin-top: 0px;
+  
+           }
+
+         
+  
+  
+  
+  
+
+
+      
+
+
+
+       

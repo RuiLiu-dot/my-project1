@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/shopCar.css">
+   
+   
+</head>
+<body>
+     <header class="public-Top">
+         <div class="box-top  clearfix">
+         <div class="inner">
+             <ul class="rollText">
+                <li><a href="">优品汇线下服务突破1700家</a></li>
+                <li><a href="">优品汇成为中国最大家电零售商</a></li>
+                <li><a href="">优品汇自营家电清洗服务上线</a></li>
+                <li><a href="">优品汇售后退换无忧服务上线</a></li>
+
+             </ul>
+
+            <ul class="comText">
+               <li><a>手机版</a></li>
+               <li>
+               <span>|</span>  
+               <img src="./images/05.png" alt="">        	
+               </li>
+               <li><a>在线客服</a></li>
+               <li><span>|</span></li>
+               <li><a>我的订单</a></li>
+               <li><span>|</span></li>
+               <li><a>会员中心</a></li>
+               <li><span>|</span></li>
+               <li><a>帮助中心</a></li>
+               <li><span>|</span></li>
+               <li><a>免费注册</a></li>
+               <li><span>|</span></li>           	
+               <li><a>请先登录</a></li>
+               
+            </ul>
+       
+          
+        </div>
+    </header>
+         <div class="box-foot">
+             <!--  -->
+             <div class="inner clearfix">
+                    <div class="item1 clearfix">
+                      <img src="images/04.png" t="">
+                      <p>
+                          <span>优品汇</span>
+                          <span>汇聚优质商品</span>
+                      </p>
+                        
+                     </div>
+                   <!-- logo-end -->
+                   <!-- 导航栏start -->
+                   <div class="item2 clearfix">
+                       <ul>
+                           <li><a href="./index.html">首页</a></li>
+                           <li><a href="javascript:;">服装</a></li>
+                           <li><a href="javascript:;">餐厨</a> </li>
+                           <li><a href="javascript:;">电器</a></li>
+                           <li><a href="javascript:;">配件</a></li>
+                           <li><a href="javascript:;">居家</a></li>
+                           <li><a href="javascript:;">西湖</a></li>
+                           <li><a href="javascript:;">洗护</a></li>
+                           <li><a href="javascript:;">杂货</a></li>
+                           <li><a href="javascript:;">饮食</a></li>                        
+                       </ul>
+                  </div>
+                   <!-- 导航栏end -->
+                   <!--搜索栏start  -->
+                <div class="public-search clearfix">
+                   
+                     <input type="text" placeholder="输入商品关键字"/>    		  	
+                </div>      
+                   <!-- 购物车部分 -->
+                <div class="buy-car clearfix">
+                     <p>我的购物车</p>
+                     <span class="num" id="spnum">3</span>
+        
+                     <!-- 购物车里面的内容 -->
+                     <div class="sanjiao"></div>
+                         <div class="goods" id="goods">
+                          <div class="item">
+                              <div class="pic">
+                           <img src="images/2.jpg" alt="">
+                             </div>
+                              <div class="midd">
+                                  <p>女式经典美丽奴V仙女裙衫</p>
+                                  <p><span>黑色L&nbsp;&nbsp;</span><span>&nbsp;&nbsp;(175/92A)&nbsp;&nbsp;</span> <span>&nbsp;&nbsp;x1</span></p>
+                              </div>
+                              <div class="ri" id="select">
+                                 <span>￥99</span>
+                                  <span title="删除" class="dele"></span>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="pic">
+                                  <img src="images/2.jpg" alt=""></div>
+                              <div class="midd">
+                                  <p>女式经典美丽奴V仙女裙衫</p>
+                                  <p><span>黑色L&nbsp;&nbsp;</span><span>&nbsp;&nbsp;(175/92A)&nbsp;&nbsp;</span> <span>&nbsp;&nbsp;x1</span></p>
+                              </div>
+                              <div class="ri" id="select">
+                                 <span>￥99</span>
+                                  <span title="删除" class="dele"></span>
+                              </div>
+                          </div>
+                           <div class="item">
+                                  <div class="pic">
+                                      <img src="images/2.jpg" alt=""></div>
+                                  <div class="midd">
+                                      <p>女式经典美丽奴V仙女裙衫</p>
+                                      <p><span>黑色L&nbsp;&nbsp;</span><span>&nbsp;&nbsp;(175/92A)&nbsp;&nbsp;</span> <span>&nbsp;&nbsp;x1</span></p>
+                                  </div>
+                                 <div class="ri" id="select">
+                                     <span>￥99</span>
+                                      <span title="删除" class="dele"></span>
+                                  </div>
+                            </div>
+                             <div class="prace">
+                                    <p>共<span id="sum">3</span>件商品</p>
+                                    <p class="all_pri" id="allprice">297.00元</p>
+                                    <button id="shop_car"><a href="./shopCar.html">去购物车清算</a></button>
+                            </div>     
+                        </div>
+                    </div> 
+
+                    <!-- boxfoot-->
+                </div>
+                </div>
+            </div>  
+
+            <!-- 我的购物车部分start -->
+             <div class="myshopCar inner">
+
+                 <header><p>我的购物车</p></header>
+                 <div class="content">
+                     <div class="buyit">
+                         <table id="shopping">
+                             <thead>
+                             <th><input type="checkbox" class="checkItem">全选</th>
+                             <th>商品信息</th>
+                             <th>单价</th>
+                             <th>数量</th>
+                             <th>小计</th>
+                             <th>操作</th>
+
+                            </thead>
+                            <tbody class="con">
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <img src="" alt="">
+                                        <span>女士超柔软拉毛运动开衫</span>
+                                        <span>颜色：黑色 &nbsp 尺码：M</span>
+
+                                    </td>
+                                    <td>￥249</td>
+                                    <td>
+                                        <span class="shopping-reduce">-</span>
+                                        <input type="text" value="1" class="shopping-input">
+                                        <span class="shopping-add">+</span>
+                                    </td>
+                                    <td>￥249</td>
+                                    <td>
+                                        <span><a>移入收藏夹</a></span>
+                                        <span><a>删除</a></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+
+                             
+                         </table>
+                     </div>
+
+                     <div class="nouse"></div>
+
+                     <div class="calprice"></div>
+
+                     <div class="guessLover"></div>
+                 </div>
+
+
+             </div>
+             
+
+             <!-- 我的购物车部分end -->
+
+             <!-- 底部start -->
+              <!-- 底部start -->
+       <div class="foot-item">
+            <footer class="inner">
+                <ul>
+                    <li>
+                        <p>客户服务</p>
+                        <div class="online message">
+                            <p>在线客服</p>
+                        </div>
+                        <div class="question message ml">
+                            <p>问题反馈</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>关注我们</p>
+                        <div class="public message">
+                            <p>公众号</p>
+                        </div>
+                        <div class="little message ml">
+                            <p>微博</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p style="margin-bottom: 20px">下载APP</p>
+                        <div class="code">
+                            <img src="./images/u1222.png" alt="" style="width: 100px">
+                        </div>
+                        <div class="code-left">
+                            <p>扫描二维码查看</p>
+                            <p>移动版原型效果</p>
+                            <p>下载页面</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>服务热线</p>
+                        <div class="number">
+                            <p>400-0000-000</p>
+                            <p>周一至周日 8:00-18:00</p>
+                            <p>(仅收市话费)</p>
+                        </div>
+                    </li>
+                </ul>
+             </footer>
+          </div>
+            <div class="foot">
+                <div class="inner">
+                    <ul class="foot-top">
+                        <li>30天无忧退换货</li>
+                        <li>满88元免邮费</li>
+                        <li>优品汇品质保证</li>
+                    </ul>
+                    <div class="foot-bott">
+                        <a href="">关于我们</a>
+                        <a href="">帮助中心</a> |
+                        <a href=""> 售后服务</a> |
+                        <a href="">配送与验收</a> |
+                        <a href="">商务合作 </a> |
+                        <a href="">企业采购</a> |
+                        <a href="">开放平台 </a> |
+                        <a href="">搜索推荐  </a> |
+                        <a href=""> 友情链接</a>
+                        <p>CopyRight &#169;优品汇 2015 - 2017 </p>
+                    </div>
+                </div>
+            </div>
+    
+    
+              <!-- 设置锚点 -->
+          <div class="go-top">
+             
+            <a href="#top">
+              <img src="images/liu.png" alt="" />
+              <img src="images/liu1.png" alt="" /> 
+              <img src="images/liu2.png" alt="" /> 
+            </a>
+            
+    
+          </div>
+    
+                       
+
+
+         
+
+
+</body>
+</html>
