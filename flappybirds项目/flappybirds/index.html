@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        canvas{
+            display: block;
+            margin: auto;
+            border: solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="360" height="512">您的浏览器不支持此HTML5标签</canvas>
+</body>
+<script src="./js/Game.js"></script>
+<script src="./js/Bird.js"></script>
+<script src="./js/Pipe.js"></script>
+<script src="./js/Background.js"></script>
+<script>
+    // 获取画板
+    var canvas = document.getElementById('canvas');
+    // 获取画笔
+    var ctx = canvas.getContext("2d");
+
+    // 定义存储图片路径的数组
+    var imgArr= ["./images/bg_day.png","./images/bird0_0.png","./images/bird0_1.png","./images/bird0_2.png",
+        "./images/land.png","./images/pipe_u.png","./images/pipe_d.png"];
+
+    // 定义一个函数，用来加载所有的图片，并返回加载后的所有图片
+    /**
+     * @imgArr 存储路径的数组
+     * @callbackfn 回调
+     * */
+    function loadImage(imgArr,callbackfn){
+        // 统计数
+        var count = 0;
+        // 定义一个数组，来接收所有的加载的img对象
+        var loadImg = [];
+        // 使用forEach()遍历，内部是一个同步操作
+        imgArr.forEach(function(value,index){
+            // 创建图片对象
+            var img = new Image();
+            // 请求路径
+            img.src = value;
+            // load事件
+            img.onload = function(){
+                // 每加载一张图片，计数一次
+                count++;
+                // 存储
+                loadImg[index] = this;
+                if(count === imgArr.length){
+                    // 执行回调
+                    return callbackfn(loadImg);
+                }
+            }
+        });
+    }
+
+    // 调用
+    loadImage(imgArr,function(img){
+        // 创建Bird鸟类的实例对象
+        var bird = new Bird(img.slice(1,4),100,100);
+        // 创建Pipe管子类的实例对象
+        var pipe = new Pipe(img[5],img[6],4,360)
+        // 创建Land地面背景类的实例对象
+        var land = new Background(img[4],4,0,400);
+        // 创建Mountain远处的山背景类实例对象
+        var mountain = new Background(img[0],2,0,0);
+
+        // 创建Game实例对象
+        var game = new Game(ctx,bird,pipe,land,mountain);
+    })
+</script>
+</html>
